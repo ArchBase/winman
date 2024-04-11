@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinShare - a platform to learn finance</title>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <style>
+        body{
+    color: whitesmoke;
+    background-color: #202020;
+    background-image: url("bghd.jpg");
+    background-repeat: no-repeat;
+}
+header{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+h1{
+    font-size: 90pt;
+}
+h3{
+    font-size: 30pt;
+    margin-top: 200pt;
+}
+h4{
+    font-size: 24pt;
+}
+p{
+    font-size: 20pt;
+}
+button{
+    margin-left: 60pt;
+    font-size: 20pt;
+    color: white;
+    background-color: #3477eb;
+    border-radius: 4pt;
+}
+button:hover{
+    background-color: blue;
+}
+.ribbon{
+    align-content: center;
+    text-align: center;
+    background-color: #044a10;
+    animation-name: anim;
+    animation-duration:2s;
+}
+.ribbon2{
+    align-content: center;
+    text-align: center;
+    background-color: #044a10;
+}
+.first-img{
+    margin: 40pt 0pt 0pt 80pt;
+}
+.fin{
+    margin-top: 0%;
+    opacity: 0;
+    color: #90fc03;
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+.kno{
+    margin-top: 0%;
+    color: #90fc03;
+    opacity: 0;
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+.exp{
+    margin-top: 0%;
+    opacity: 0;
+    color: #90fc03;
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    position: absolute;
+}
+
+@keyframes anim{
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+@keyframes fadeInOut{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+        <h1 class="kno">Knowledge</h1>
+        <h1 class="exp">Experience</h1>
+        <h1 class="fin">Finshare</h1>
+        <h3>A platform to learn financial independence</h3>
+        </div>
+    </header>
+    <hr>
+    <div class="ribbon">
+        <h4>Wealth, Fame, Power</h4>
+        <h4>We want it all!!</h4>
+    </div>
+    <hr>
+    <section>
+        <h4>&emsp;&emsp;About us</h4>
+        <p>
+        This is a website dedicated to improve the financial knowledge 
+        of those who want to be finantially independent. <br>
+        we made this website when we realised our financial illiteracy and our empty pockets, <br>
+        we wanted to help ourselves and others facing the same situation 
+        </p>
+
+        <section class="info">
+            <h4>&emsp;&emsp;Your guide to financial freedom</h4>
+            <p>
+                Are you in a bad financial stage? we can help you become financially independent.<br>
+                To get started, click the button below.
+            </p>
+        </section>
+        <button>click here to buy our course</button>
+
+        <hr>
+        <div class="ribbon2">
+            <h4>Experience + Knowledge = Wisdom</h4>
+            <h4>Wisdom + Service = FinShare</h4> 
+        </div>
+        <hr>
+
+        <section class="testimonial">
+            <h4>&emsp;&emsp;Testimonials</h4>
+            <p>
+                FinShare is an awesome platform to learn about money and finanace. <br>
+                &emsp; - Elon Musk<br><br>
+
+                FinShare helped me a lot in the initial stages of my investing journey, 10/10 would recommend.<br>
+                &emsp; - Warren Buffet<br><br>
+
+                I have learned quite a lot about managing debt and governments from Finshare. <br>
+                &emsp; - Gautam Adani<br><br>
+            </p>
+        </section>
+    </section>
+</body>
+</html>
