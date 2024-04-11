@@ -1,4 +1,5 @@
 {
-    "forget": 3,
-    "delay": 1
+    "forget": 5,
+    "delay": 1,
+    "delay_passkey": 0
 }
