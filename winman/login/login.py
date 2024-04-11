@@ -7,7 +7,7 @@ import globals_config as gb
 class Authenticator:
     def __init__(self) -> None:
         self.verified = False
-        self.reference_image = cv2.imread("test/dependencies/r.jpg")
+        self.reference_image = cv2.imread("C:/Users/aksha/Projects/creative_under_ends/winman/winman/winman/login/r.jpg")
         self.not_verified_count = 0
     def verify_using_camera(self, frame):
         try:

@@ -18,7 +18,7 @@ def fullscreen_window():
     screen_height = root.winfo_screenheight()
 
     # Set the window size to fullscreen
-    root.geometry(f"{screen_width}x{screen_height}+0+0")
+    #root.geometry(f"{screen_width}x{screen_height}+0+0")
 
     # Make the window non-exitable
     root.attributes("-topmost", True)

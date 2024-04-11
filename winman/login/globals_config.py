@@ -7,7 +7,7 @@ config = None
 
 # Read 
 # the JSON file
-with open("config.json", "r") as file:
+with open("C:/Users/aksha/Projects/creative_under_ends/winman/winman/winman/login/config.json", "r") as file:
     config = json.load(file)
 
 
@@ -15,7 +15,7 @@ with open("config.json", "r") as file:
 def close():
     #print("Closed after saving weights")
     # Write the updated dictionary back to the JSON file
-    with open("maav/config.json", "w") as file:
+    with open("C:/Users/aksha/Projects/creative_under_ends/winman/winman/winman/login/config.json", "w") as file:
         json.dump(config, file, indent=4)
     print()
 
