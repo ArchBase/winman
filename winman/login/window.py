@@ -2,49 +2,37 @@ import tkinter as tk
 import threading
 import time
 
-root = None
 
-def fullscreen_window():
-    global root
-    # Create the fullscreen window
-    root = tk.Tk()
-    root.title("Fullscreen Window")
 
-    # Set background color to dark
-    root.configure(bg="#000000")
-    root.config(cursor="none")
-    # Get the screen width and height
-    screen_width = root.winfo_screenwidth()
-    screen_height = root.winfo_screenheight()
+class Blocker:
+    def __init__(self) -> None:
+        self.root = None
+    def block_screen(self):
+        self.root = tk.Tk()
+        self.root.title("Fullscreen Window")
 
-    # Set the window size to fullscreen
-    root.geometry(f"{screen_width}x{screen_height}+0+0")
+        # Set background color to dark
+        self.root.configure(bg="#000000")
+        self.root.config(cursor="none")
+        # Get the screen width and height
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
 
-    # Make the window non-exitable
-    root.attributes("-topmost", True)
-    root.attributes("-fullscreen", True)
+        # Set the window size to fullscreen
+        self.root.geometry(f"{screen_width}x{screen_height}+0+0")
 
-    label = tk.Label(root, text="Sorry, Your not my master!", font=("Helvetica", 24), fg="red", bg="#000000")
-    label.pack(expand=True)
+        # Make the window non-exitable
+        self.root.attributes("-topmost", True)
+        self.root.attributes("-fullscreen", True)
 
-    # Run the application
-    root.mainloop()
+        label = tk.Label(self.root, text="Sorry, Your not my master!", font=("Helvetica", 24), fg="red", bg="#000000")
+        label.pack(expand=True)
 
-def close_fullscreen_window():
-    global root
-    # Wait for 5 seconds
-    time.sleep(5)
-    # Close the fullscreen window
-    root.quit()
+        # Run the application
+        self.root.mainloop()
+    def release_screen(self):
+        # Wait for 5 seconds
+        #time.sleep(5)
+        # Close the fullscreen window
+        self.root.quit()
 
-# Create a separate thread for the fullscreen window
-fullscreen_thread = threading.Thread(target=fullscreen_window)
-fullscreen_thread.start()
-#time.sleep(5)
-# Wait for 5 seconds in the main thread and then close the window
-close_fullscreen_thread = threading.Thread(target=close_fullscreen_window)
-close_fullscreen_thread.start()
-
-# Join the threads to wait for them to finish
-fullscreen_thread.join()
-close_fullscreen_thread.join()
